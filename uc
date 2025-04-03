@@ -29,6 +29,12 @@ if [ "$#" -eq 0 ]; then
     exit 0
 fi
 
+# Check for -e option to open file in default editor
+if [ "$1" == "-e" ]; then
+    ${EDITOR:-vi} "$COMMANDS_FILE"
+    exit 0
+fi
+
 # Determine search mode
 if [ "$1" == "-c" ]; then
     if [ -z "$2" ]; then

@@ -11,6 +11,8 @@ Category matching is bugged right now and doesn't work.
 ```shell
 # Print entire text file
 uc
+# Edit text file
+uc -e
 # Print first line that contains the search as a substring
 uc <search>
 # Print first category that contains the search as a substring within the category name
